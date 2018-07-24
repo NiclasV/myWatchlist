@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>myWatchlist</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-uZ+W+UKzXFzZLakrBt30saU2UAoQTIFjYJcOdtmf7oFrPd/Q0/3KqlIYmSvyyQa3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="main-menu">
+                <div class="menu-logo">
+                    <a class="navbar-brand" href="index.html">myWatchlist</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My lists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="displayModule.createListForm();return false;">Create new list</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="displayModule.aboutPage()">About</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main id="mainDiv">
+            <div class="search-form">
+                <h2>Search for a movie!</h2>
+                <form class="form-inline" onsubmit="actionModule.handleSearch(searchTitle.value, 1); return false;">
+                    <input type="text" class="form-control" id="searchTitle" placeholder="Title or IMDB-ID (tt0499549)">
+                    <input type="submit" value="Search!" class="btn btn-success" id="searchBtn">
+                </form>
+            </div>
+
+            <div class="spinner hidden">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+
+            <div class="search">
+                <div id="searchResult" class="flexbox"></div>
+                <div id="pagination"></div>
+            </div>
+         
+            <h2>Watchlists</h2>
+            <div id="myLists" class="flexbox">
+                
+            </div>
+
+        </main>
+
+        <footer class="bg-dark">
+            <div class="footer-content">
+                <a href="http://github.com/niclasv/">
+                <i class="fab fa-github-square fa-3x"></i> <br>
+                <small id="emailHelp" class="white">A project by Niclas Victorsson </small></a>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+
+</html>
